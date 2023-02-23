@@ -29,6 +29,24 @@
     gap: 2em;
 }
 
+.my-btn{
+    padding: 1em 2em;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    margin: 0 1em;
+}
+
+.btn-null{
+    background-color: rgb(162, 17, 17);
+}
+
+.bgc-span{
+    background-color: rgb(160, 234, 225);
+    padding: 0.4em 1em;
+}
+
 
 /*biglietto------------------------------------------------------*/
 #user-result{
@@ -37,4 +55,24 @@
     background-color: rgb(21, 148, 74);
     padding: 3em 3em;
     border-radius: 20px;
+}
+
+.result-format{
+    display: flex;
+    flex-direction: row;
+
+    gap: 30px;
+}
+
+
+.bgc-span-result{
+    background-color: rgb(92, 232, 150);
+    padding: 0.4em 1em;
+}
+
+.bgc-price-result{ 
+    display: inline-block;
+    background-color: white;
+    padding: 0.4em 1em;   
+    margin-left: 1.5em;
 }

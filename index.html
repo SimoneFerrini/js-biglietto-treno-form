@@ -16,24 +16,29 @@
         <div class="dati-utente">
             <div class="dati-utente-top">
                 <div class="dati-utente-format">
-                    <span>Inserisci la quantità di km che vuoi percorrere: </span>
+                    <span class="bgc-span">Inserisci la quantità di km che vuoi percorrere: </span>
                     <input type="text" id="user-km">
                 </div>
 
                 <div class="dati-utente-format">
-                    <span>Inserisci la tua età: </span>
+                    <span class="bgc-span">Inserisci la tua età: </span>
                     <input type="text" id="user-age">
                 </div>
             </div>
 
-            <button id="confirm">Confirm</button>
+            <div>
+                <button id="confirm" class="my-btn">Confirm</button>
+                <a href="index.html"><button class="my-btn btn-null">Cancel</button></a>
+            </div>
         </div>
 
         <!--biglietto-->
-        <div id="user-result">
-            <span>Il prezzo del tuo biglietto è: </span>
-            <span id="prezzo-totale"></span>
-            <span>&euro;</span>
+        <div id="user-result" class="result-format">
+            <span class="bgc-span-result">Il prezzo del tuo biglietto è: </span>
+            <div class="bgc-price-result">
+                <span id="prezzo-totale"></span>
+                <span>&euro;</span>
+            </div>
         </div>
     </div>
 
