@@ -18,3 +18,47 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 */
 
 
+/*chiedere km e età ad utente*/
+let userKmEl = document.getElementById("user-km");
+let userAgeEl = document.getElementById("user-age");
+let priceForKm = 0.21;
+
+
+/*btn confirm - controlli e operazioni*/
+
+
+let btnConfirmEl = document.getElementById("confirm");
+
+btnConfirmEl.addEventListener("click" , function() {
+        /*assegno i valori degli input a variabili*/
+        let userKm = parseInt(userKmEl.value);
+        let userAge = parseInt(userAgeEl.value);
+        
+        /*controllo che le variabili siano valide, altrimenti messaggio di errore*/
+        if (isNaN(userKm) || isNaN(userAge) || userKm<=0 || userAge<=0){
+            document.write("I dati inseriti non sono validi, devi inserire un numero intero maggiore di 0!!! <br> Ricarica la pagina");
+        }
+        else {
+            /*se i valori sono validi eseguo calcolo prezzo e prezzo totale in caso di sconto*/
+            let price = userKm * priceForKm;
+            let finalPrice = price;
+
+            if (userAge < 18) {
+                let discount = price / 100 * 20;
+                finalPrice = price - discount;
+
+            } else if(userAge >= 65) {
+                let discount = price / 100 * 40;
+                finalPrice = price - discount;
+            }
+
+            finalPrice = finalPrice.toFixed(2);
+            
+            document.getElementById("prezzo-totale").innerHTML = finalPrice;
+            
+            
+        }
+    
+    }
+)
+
