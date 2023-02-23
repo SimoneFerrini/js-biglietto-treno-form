@@ -19,8 +19,7 @@ Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagi
 
 
 /*chiedere km e età ad utente*/
-let userKmEl = document.getElementById("user-km");
-let userAgeEl = document.getElementById("user-age");
+
 let priceForKm = 0.21;
 
 
@@ -31,8 +30,8 @@ let btnConfirmEl = document.getElementById("confirm");
 
 btnConfirmEl.addEventListener("click" , function() {
         /*assegno i valori degli input a variabili*/
-        let userKm = parseInt(userKmEl.value);
-        let userAge = parseInt(userAgeEl.value);
+        let userKm = parseInt(document.getElementById("user-km").value);
+        let userAge = parseInt(document.getElementById("user-age").value);
         
         /*controllo che le variabili siano valide, altrimenti messaggio di errore*/
         if (isNaN(userKm) || isNaN(userAge) || userKm<=0 || userAge<=0){
@@ -56,6 +55,7 @@ btnConfirmEl.addEventListener("click" , function() {
             
             document.getElementById("prezzo-totale").innerHTML = finalPrice;
             
+            document.getElementById("user-result").style.display = "block";
             
         }
     
